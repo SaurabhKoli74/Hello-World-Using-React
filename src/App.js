@@ -2,12 +2,16 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const name="Saurabh";
+  const isLoggedIn=true;
   return (
+    
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          {!isLoggedIn && <h1>Hello World</h1>}
+          {isLoggedIn && "Hello "+name}
         </p>
         <a
           className="App-link"
